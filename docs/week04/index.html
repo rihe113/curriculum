@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>week04</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-blue-900"  style="font-family: 'Playfair Display', serif;">
+    <header class="bg-blue-900 shadow-lg flex flex-col md:flex-row justify-between items-center px-6 py-4 gap-4">
+    <img src="./images/rogo.png" alt="香水会社のロゴ" class="w-20 h-20">
+    <nav>
+        <ul class="flex gap-4 text-amber-300">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Fragrance Collection">Fragrance Collection</a></li>
+            <li><a href="#Introduction">Introduction</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+    <section id="Home">
+        <div class="relative">
+        <img src="./images/main.png" alt="女性の後ろ姿" class="w-full h-[600px] object-cover">
+        <h1 class="absolute inset-0 text-amber-300 font-bold text-3xl flex items-center justify-center drop-shadow-lg bg-black/40">Fragrance Illuminates<br class="md:hidden"> Beyond Light</h1>
+        </div>
+    </section>
+    
+    <section id="Fragrance Collection">
+    <h1 class="text-3xl text-center m-8 text-amber-300">Fragrance Collection</h1>
+    <div class="px-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="bg-amber-100 p-8 rounded-lg hover:scale-105 hover:shadow-xl">
+            <img src="./images/lemon.png" alt="柑橘香水" class="w-full h-64 object-cover rounded-lg">
+            <h2 class="mt-3 text-xl font-bold">Citrus Breeze </h2>
+            <p class="text-gray-600">爽やかな柑橘の香り。</p>
+            <p class="font-bold">¥8,800</p>
+        </div>
+        <div class="bg-amber-100 p-8 rounded-lg hover:scale-105 hover:shadow-xl">
+            <img src="./images/キンモクセイ.png" alt="キンモクセイ香水" class="w-full h-64 object-cover rounded-lg">
+            <h2 class="mt-3 text-xl font-bold">Osmanthus Dream</h2>
+            <p class="text-gray-600">落ち着いたキンモクセイの香り。</p>
+            <p class="font-bold">¥8,800</p>
+        </div>
+        <div class="bg-amber-100 p-8 rounded-lg hover:scale-105 hover:shadow-xl">
+            <img src="./images/グリーンアップル.png" alt="グリーンアップル香水" class="w-full h-64 object-cover rounded-lg">
+            <h2 class="mt-3 text-xl font-bold">Green Apple Mist</h2>
+            <p class="text-gray-600">青リンゴの透明感と爽やかさが広がる、軽やかな香り。</p>
+            <p class="font-bold">¥8,800</p>
+        </div>
+        <div class="bg-amber-100 p-8 rounded-lg hover:scale-105 hover:shadow-xl">
+            <img src="./images/ラベンダー.png" alt="ラベンダー香水" class="w-full h-64 object-cover rounded-lg">
+            <h2 class="mt-3 text-xl font-bold">Citrus Breeze </h2>
+            <p class="text-gray-600">落ち着くラベンダーの香り。</p>
+            <p class="font-bold">¥8,800</p>
+        </div>
+        <div class="bg-amber-100 p-8 rounded-lg hover:scale-105 hover:shadow-xl">
+            <img src="./images/ローズ.png" alt="ローズ香水" class="w-full h-64 object-cover rounded-lg">
+            <h2 class="mt-3 text-xl font-bold">Rose Elegance</h2>
+            <p class="text-gray-600">深紅のバラが静かに香る、気品あるフローラル。</p>
+            <p class="font-bold">¥8,800</p>
+        </div>
+        <div class="bg-amber-100 p-8 rounded-lg hover:scale-105 hover:shadow-xl">
+            <img src="./images/もも.png" alt="ピーチ香水" class="w-full h-64 object-cover rounded-lg">
+            <h2 class="mt-3 text-xl font-bold">Peach Bloom</h2>
+            <p class="text-gray-600">やわらかなピーチの香り。</p>
+            <p class="font-bold">¥8,800</p>
+        </div>
+        <div class="bg-amber-100 p-8 rounded-lg hover:scale-105 hover:shadow-xl">
+            <img src="./images/ジャスミン.png" alt="ジャスミン香水" class="w-full h-64 object-cover rounded-lg">
+            <h2 class="mt-3 text-xl font-bold">Night Jasmine</h2>
+            <p class="text-gray-600">月明かりに咲くジャスミンの甘く幻想的な香り。</p>
+            <p class="font-bold">¥8,800</p>
+        </div>
+        <div class="bg-amber-100 p-8 rounded-lg hover:scale-105 hover:shadow-xl">
+            <img src="./images/カシス.png" alt="カシス香水" class="w-full h-64 object-cover rounded-lg">
+            <h2 class="mt-3 text-xl font-bold">Citrus Breeze </h2>
+            <p class="text-gray-600">カシスの深い甘みと渋みが漂う、モードな香り。</p>
+            <p class="font-bold">¥8,800</p>
+        </div>
+        </section>
+    </div>
+    </div>
+    <section id="Introduction">
+    <div class="text-center text-amber-300">
+        <h1 class="text-3xl text-bold font-bold m-8">Introduction</h1>
+        <h2 class="bg-amber-100 rounded-lg text-blue-900 grid items-center justify-center p-4 m-8">2024年に誕生した私たちのブランドは<br>
+            深い夜の美しさを香りに閉じ込めたフレグランスコレクションを展開しています。</h2>
+    </div>
+    </section>
+    
+    </main>
+    </body>
+</html> 
