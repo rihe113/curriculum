@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devie-width,initial-scale=1.0">
+    <title>BMI計算ツール--week06</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Yomogi", cursive;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-slate-100 flex items-center justify-center p-6 text-gray-600 text-center">
+    <div class="bg-red-100 shadow rounded-lg p-16">
+        <h1 class="font-bold text-2xl">BMI計算ツール</h1>
+        <label class="block m-2 text-xl">身長</label>
+        <input id="height" type="number" class="w-full border border-gray-300 rounded-lg px-4 py-3" />
+        <label class="block m-2 text-xl">体重</label>
+        <input id="weight" type="number" class="w-full border border-gray-300 rounded-lg px-4 py-3" />
+        <button type=button id="calaBtn" class="block m-2 p-4 text-xl bg-red-200 rounded-lg shadow-lg">計算結果</button>
+        <p id="result" class="m-2 text-xl"></p>
+    </div>
+
+    <script>
+        function calcBmi(height, weight) {
+            const heightM = height / 100;
+            return weight / (heightM * heightM);
+        }
+        function getJudgment(bmi) {
+            if (bmi < 18.5) {
+                return "痩せ型";
+            } else if (bmi < 25) {
+                return "普通";
+            } else {
+                return "肥満";
+            }
+        }
+
+        const button = document.querySelector("#calaBtn");
+        const result = document.querySelector("#result");
+
+        button.addEventListener("click", () => {
+            const height = Number(document.querySelector("#height").value);
+            const weight = Number(document.querySelector("#weight").value);
+
+            if (height <= 0 || weight <= 0) {
+                result.textContent = "身長と体重の両方を入力しましょう！";
+                return;
+            }
+
+            const bmi = calcBmi(height, weight);
+            const judgment = getJudgment(bmi);
+
+            result.textContent =
+                `BMI：${bmi.toFixed(1)}（${judgment}）`;
+        });
+    </script>
+
+</body>
+
+</html>
