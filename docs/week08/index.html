@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国学科 教員紹介</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-red-50 min-h-screen">
+
+    <div class="max-w-6xl mx-auto p-8">
+
+        <h1 class="text-4xl text-center text-red-700 font-bold mb-2"
+            style="font-family: 'Zen Old Mincho', serif;">
+            🏮 中国学科 教員紹介 🏮
+        </h1>
+
+        <div
+            id="memberList"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
+
+    </div>
+
+    <script>
+
+        const members = [
+            {
+                name: "明田川先生",
+                role: "中国現代文学",
+                comment: "意外と背が高い。",
+                icon:"🦒"
+            },
+            {
+                name: "榎本先生",
+                role: "中国文化",
+                comment: "授業では映画をたくさん見せてくれる。",
+                icon:"🦉"
+            },
+            {
+                name: "石村先生",
+                role: "中国語学",
+                comment: "授業中の小話が面白い。",
+                icon:"🐿"
+            },
+            {
+                name: "材木屋先生",
+                role: "中国古典",
+                comment: "流行に乗ったファッション。",
+                icon: "🐍"
+            },
+            {
+                name: "麻生先生",
+                role: "現代中国事情",
+                comment: "なかなかクレイジーな酒乱。",
+                icon:"🐼"
+            }
+        ];
+
+        const memberList = document.getElementById("memberList");
+
+        members.forEach(function(member) {
+
+            const card = document.createElement("div");
+
+            card.className = "bg-white rounded-xl shadow-lg border-2 border-red-300 p-6";
+
+            card.innerHTML = `
+                <div class="text-5xl text-center mb-4">
+                    ${member.icon}
+                </div>
+
+                <h2 class="text-2xl font-bold text-center text-red-700 mb-2">
+                    ${member.name}
+                </h2>
+
+                <p class="text-center text-yellow-600 font-semibold mb-4">
+                    ${member.role}
+                </p>
+
+                <p class="text-center text-gray-700">
+                    ${member.comment}
+                </p>
+            `;
+
+            memberList.appendChild(card);
+
+        });
+
+    </script>
+
+</body>
+</html>
